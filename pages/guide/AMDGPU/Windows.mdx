@@ -1,0 +1,25 @@
+import { Callout } from 'nextra-theme-docs'
+import { Textarea } from '@nextui-org/react';
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+# <a name="amdwin"></a> Windows guide for AMD GPU or APU 
+
+<Callout type="warning" emoji="⚠️">
+  Currently, (ROCm 5.4.3 and prior versions) are not supported on Windows. 
+</Callout>
+
+## APUs on Windows 
+
+On Windows platform, the 'Unified Memory' design is able to allocate system Memory on demand to 'VRAM' for the integrated Radeon™ Graphics. 
+
+### Allocate dedicated system RAM to the APU
+
+In motherboard BIOS, enable ‘Above 4G encoding’ and auto Re-Size BAR support. There are setting to choose primary graphic, igpu or discrete PCIE gpu. Choose igpu. There is also a mode for 'GAME' or 'FORCE'. 'Force' mode allows you to customize the dedicated iGPU VRAM. There are multiple options to set frame buffer size: AUTO,1,2,4,8,16 GB. 
+
+Although it's not as efficient as on Linux, there are ways to take advantage of the the hardwares on Windows. 
+
+
+### DirectML 
+
+See [video tutorial](https://youtu.be/_6yP3Gv04-w) and [playlist](https://www.youtube.com/playlist?list=PLAhnBIAZe37PhSD5F-6IqpndGX5dkSYCl)
+

@@ -1,0 +1,76 @@
+import Link from '../components/core/Link';
+import Card, { Cards } from '../components/core/Card';
+import Globe from '../components/cobeGlobe'
+import { Tab, Tabs } from 'nextra-theme-docs'
+import { Callout } from 'nextra-theme-docs'
+import {Listbox, ListboxItem} from "@nextui-org/react";
+import ListboxWrapper from "../components/core/ListboxWrapper";
+
+<Globe />
+ 
+<Callout emoji="👾">
+  **Welcome** to our project to help to bring AGI to Billions of people!
+</Callout>
+
+<Callout type="info" emoji="🚏">
+  One of our projects (turn $95 APU into a 16GB VRAM GPU) has been covered by multiple technology medias in multiple countries !! 
+
+
+  <Link href="https://news.ycombinator.com/item?id=37162762" target="blank">Ycombinator</Link>
+
+  <Link href="https://www.techspot.com/news/99847-modder-converts-95-amd-apu-16gb-linux-ai.html" target="blank">TechSpot</Link>
+
+  <Link href="https://www.tomshardware.com/news/dollar95-amd-cpu-becomes-16gb-gpu-to-run-ai-software" target="blank">Tom's Hardware</Link>
+
+  <Link href="https://news.italy24.press/technology/793478.html" target="blank">news.italy24</Link>
+
+  <Link href="https://mp.weixin.qq.com/s?__biz=Mzg2NDgzNTQ4MA==&mid=2247710807&idx=6&sn=bb8126dfac26a0de8510ad26c94cdc0b&chksm=ce6ebaa0f91933b698ebb6f21af240cc7b65491bc4cd5e538c8c595367ada11a6392e8922268&mpshare=1&srcid=0820qiNwxX0n8BWpPVozKZhc&sharer_sharetime=1692518709991&sharer_shareid=6df86c7a5788ccff96f97fe7bad90076&from=singlemessage&scene=1&subscene=10000&clicktime=1692796488&enterid=1692796488&sessionid=0&ascene=1&fasttmpl_type=0&fasttmpl_fullversion=6824318-en_US-zip&fasttmpl_flag=0&realreporttime=1692796488783&devicetype=android-33&version=28001e44&nettype=WIFI&lang=en&countrycode=US&exportkey=n_ChQIAhIQwKfiCcXIiYXJkYpBnN8k%2FhLUAQIE97dBBAEAAAAAACmtKIPRAxEAAAAOpnltbLcz9gKNyK89dVj0ihuxGmlzD%2B8IQ6NUyiE8OsFGlMQV%2BDPeHXsGM%2BXORLl89nT%2B%2FXqgYshYKaZF5FzeyHlv0BmZK5rL3EhTfym4mQeR58yyX90bpGeurVX9aFqzqlN2zJ395b6CYJa1WrG63j5uG1zmUL881X05lVOZdImd86lOFuFlpWnmBv8HwC6piEMMcUcJxZjhwUavclbjEPpteUiT%2Bz4ydxf5veyhbVc6soAlfnRDlTOPoC19&pass_ticket=YOJ%2BeDK0M13Arc1RxwGs%2FOKFbUyiPERpEcwMhGzNTP0ZZ%2FnzPG0BuGtPhqYJux7J&wx_header=3" target="blank">Chinese Media</Link> 
+
+Click to watch the video demo: <Link href="https://youtu.be/HPO7fu7Vyw4" target='blank'> Democratize AI: turn $95 AMD APU into a 16GB VRAM GPU AI workhorse.Demo of AI app. stable diffusion </Link>
+
+</Callout>
+
+## Domocritize the AGI. Protect privacy and freedom. Avoid AI threat. 
+
+The goal is to provide hardware and software for orgnizations and people to develop or use AGI everywhere. 
+
+Artificial intelligence is transforming industries from healthcare to finance, but access to this technology has been limited by high costs and technical expertise. Example: GPU VRAM limits. Cloud GPU high expenses. Google Colab limit the usage for notebooks running AUtomatic1111's WebUI for stable diffusion. …
+
+That's why we're thrilled to introduce this project, which is democratizing AI with low-cost consumer hardware and smart-designed software.
+
+This website includes multiple resources to make AGI accessible to everyone. The goal is that whoever you are, with your current or future hardware of choice, you can find the way to run state of art AI, AGI model locally. 
+
+By democratizing AI, we're opening up a world of possibilities for entrepreneurs, hobbyists, and students alike. Using our guides and tutorials, you can build your own AI-powered products, develop your own AI models, and explore the potential of this transformative technology. Don't let high costs and technical barriers hold you back from the potential of AI. Join the democratization movement and see what you can create. 
+
+
+<Tabs items={['🧑‍💻 AMD APU and GPU', '🚏 Nvidia GPU', '🗳 CPU', 'Apple Metal (M1/M2)', 'Online services']}>
+  <Tab>
+    **AMD GPU**: the recent ROCm development has enabled consumer GPU to run AI models. 
+    
+    Click [here](/guide/AMDGPU/APU) to read more.
+        <Tabs items={['Windows', 'Linux']}>
+          <Tab>
+            **Windows**: guide. 
+            Click [here](/guide/AMDGPU/APU) to read more.    
+        </Tab>
+        <Tab>
+          **Linux**: guide.
+          Click [here](/guide/AMDGPU/APU_Linux) to read more. 
+        </Tab>
+      </Tabs>
+  </Tab>
+  <Tab>
+    **Nvidia GPU**: CUDA library backed consumer and data center GPUs has been widely used in research, development and productions. (Details comming soon!)
+  </Tab>
+  <Tab>
+    Modern **CPU (Intel or AMD)** can be utilized for running AI models. (Details comming soon!) 
+  </Tab>
+  <Tab>
+    **Apple Metal (M1/M2)** has a unified access memory design which can help to run large AI models. (Details comming soon!)
+  </Tab>
+  <Tab>
+    **Online Services** : we will also develop and deploy some free services. Please [donate](/donate) to support this project. Thank you! 
+  </Tab>
+</Tabs>
+
+

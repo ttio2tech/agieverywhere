@@ -1,0 +1,184 @@
+import { Callout } from 'nextra-theme-docs'
+import { Textarea } from '@nextui-org/react';
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+
+# AI softwares
+
+After the installation of deep learning machine learning frameworks such as Pytorch or Tensorflow, the softwares generally works regardless of the hardwares. 
+
+
+## text to image generating: 
+
+### Stable Diffusion
+Stable Diffusion is a generative model that can be used to create realistic and diverse images. It was developed by the start-up Stability AI in collaboration with a number of academic researchers and non-profit organizations. Stable Diffusion is a latent diffusion model, a kind of deep generative neural network.
+
+Stable Diffusion works by first creating a latent space, which is a high-dimensional space that represents all possible images. The model then learns to map from the latent space to the real image space. This mapping is done by a neural network that is trained on a dataset of images.
+
+To generate an image, Stable Diffusion starts with a random image in the latent space. The model then iteratively updates the image by adding noise and then removing the noise. The noise is added in a way that encourages the image to become more realistic. The process is repeated until the image is satisfactory.
+
+Stable Diffusion has been shown to be able to generate realistic and diverse images. It has been used to create images of people, animals, objects, and scenes. The model has also been used to create images of fictional characters and objects.
+
+Stable Diffusion is a powerful tool that can be used to create a wide variety of images. It is still under development, but it has the potential to be a valuable tool for artists, designers, and researchers.
+
+<Tabs items={['🧑‍💻 Diffusers package', '🚏 Web UI ']}>
+<Tab>
+1. Install the diffuers package
+
+```bash copy 
+pip install -U transformers accelerate diffusers 
+```
+
+2. Optional: Download the stable diffusion models 
+
+3. Use the diffuser pipeline to run text to image generating. 
+Examples: 
+```bash   copy
+import torch
+from diffusers import StableDiffusionPipeline
+#### half precision, use less amount of VRAM
+pipe = StableDiffusionPipeline.from_pretrained("waifu-diffusion", revision="fp16", torch_dtype=torch.float16, safety_checker=None)
+### full precision: uncomment the following line to use full precision
+#pipe = StableDiffusionPipeline.from_pretrained("waifu-diffusion", torch_dtype=torch.float32, safety_checker=None)
+pipe = pipe.to("cuda")
+prompt = "masterpiece, best quality, 1girl, green hair, sweater, looking at viewer, upper body, beanie, outdoors, watercolor, night, turtleneck"
+image = pipe(prompt).images[0]
+image.show()
+image.save("saveoutput_imgname.png")
+
+```
+
+</Tab>
+<Tab>
+
+[Stable diffusion webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 
+
+It's one of the most successful open source UI. It allows users to generate images using the Stable Diffusion algorithm. The web application is easy to use and can be accessed from any web browser. To use the application, simply select a prompt and then adjust the parameters to control the style and content of the generated image. The application is a powerful tool that can be used to create a wide variety of images, including portraits, landscapes, and abstract art.
+
+Here are some of the features of the Stable Diffusion web application:
+
+    * Easy to use: The application is easy to use and can be accessed from any web browser.
+    * Powerful: The application can be used to create a wide variety of images, including portraits, * landscapes, and abstract art.
+    * Flexible: The application allows users to control the style and content of the generated images.
+    Free: The application is free to use.
+
+
+
+It is also compatible with half precision. (5700xt has issues with half precision giving black/grey images) 5700xt issue: https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/5468
+
+
+See the [video guide](https://youtu.be/99G9fhCrdsQ) for installations. 
+
+
+</Tab>
+</Tabs>
+
+
+
+
+## Large language models 
+
+Large language models are a type of artificial intelligence that are trained on a massive dataset of text. They can be used for a variety of tasks, including text generation, translation, question answering, summarization, and creative writing. The development of large language models is a rapidly evolving field. It is likely that we will see even more powerful models in the future.
+
+
+### appications 
+
+Large language models have found numerous applications across various domains, thanks to their ability to process and generate human-like text. Here are some prominent applications of large language models:
+
+    * Natural Language Understanding (NLU): Large language models excel in tasks like sentiment analysis, text classification, named entity recognition, and semantic parsing. They can understand and interpret human language, enabling applications such as chatbots, virtual assistants, and customer support systems.
+
+    * Language Translation: Language models have been leveraged for machine translation, enabling the automatic translation of text between different languages. They can capture context and nuances to generate more accurate and fluent translations.
+
+    * Text Generation: Language models are capable of generating human-like text, making them useful for applications like content creation, creative writing, and storytelling. They can assist with writing articles, product descriptions, social media posts, and more.
+
+    * Summarization: Large language models can condense lengthy documents or articles into shorter summaries while preserving the key information. This application is valuable for news aggregation, document analysis, and content summarization services.
+
+    * Question-Answering Systems: Language models can be used to build question-answering systems that provide responses to user queries based on a given context. These systems are valuable for information retrieval, virtual assistants, and knowledge base systems.
+
+    * Language Generation for Games: Large language models can generate dialogues and narratives for interactive storytelling in video games. This enables more immersive and dynamic game experiences with engaging characters and plotlines.
+
+    * Code Generation and Auto-completion: Language models can assist software developers by suggesting code snippets, auto-completing code, and aiding in programming tasks. This improves productivity and helps developers write code more efficiently.
+
+    * Text Classification and Filtering: Language models can be used for text classification tasks, such as spam filtering, sentiment analysis, and content moderation. They can automatically categorize and filter text based on predefined criteria.
+
+    * Language Model as a Service: Large language models can be deployed as APIs, allowing developers to integrate them into their applications without having to train and maintain their own models. This enables developers to leverage the power of language models without the need for extensive infrastructure.
+
+    * Research and Exploration: Language models provide researchers with tools for analyzing text data, exploring linguistic patterns, and conducting experiments in natural language processing. They contribute to advancing the understanding of human language and its applications.
+
+    * Search engines: LLMs can be used to improve the accuracy and relevance of search results. For example, they can be used to identify and rank websites that are relevant to a user's query.
+    * Natural language processing: LLMs can be used to perform a variety of natural language processing tasks, such as text classification, sentiment analysis, and machine translation.
+    * Healthcare: LLMs can be used to develop new drugs and treatments, as well as to diagnose and treat diseases. For example, they can be used to analyze large datasets of medical records to identify patterns that may be indicative of a disease.
+    * Robotics: LLMs can be used to develop more intelligent robots that can interact with the world around them in a more natural way. For example, they can be used to teach robots how to understand and respond to human language.
+    * Code generation: LLMs can be used to generate code, which can be used to develop new software applications and websites. For example, they can be used to generate code that is tailored to a specific user's needs.
+
+These are just a few of the many applications of large language models. As LLMs continue to develop, we can expect to see even more innovative and groundbreaking applications in the future.
+
+** LLM Models Volutionary Tree  
+![LLM Volutionary tree](/llm_volutionary_tree.jpeg)
+Adapted from https://github.com/Mooler0410/LLMsPracticalGuide 
+
+
+The APU can be used for inferencing and also light weight training (fine tuning) tasks. 
+
+bitsandbytes 
+bitsandbytes can be used for 8-bit quantitization to save VRAM. 
+
+4-bit mode also works. 
+
+
+Web UI: 
+text-generation-webui
+
+Here are some examples of the open source models. 
+
+### GPT (Generative Pre-trained Transformer)
+
+GPT is a series of large language models developed by OpenAI. These models are based on the transformer architecture and have made significant advancements in natural language processing and generation. 
+
+    * GPT-1: Introduced in 2018, GPT-1 was the initial version of the series. It demonstrated the effectiveness of pre-training models on a vast amount of text data and fine-tuning them for specific tasks.
+
+    * GPT-2: Released in 2019, GPT-2 garnered significant attention due to its impressive language generation capabilities. It consisted of 1.5 billion parameters, enabling it to produce coherent and contextually relevant text across various domains. However, GPT-2's release was accompanied by concerns about potential misuse, leading to limited access to the full model initially.
+
+    * GPT-3: Unveiled in 2020, GPT-3 is the largest and most influential model in the series to date. It had a staggering 175 billion parameters, allowing it to generate remarkably human-like text. GPT-3 demonstrated exceptional performance across a wide range of natural language processing tasks, including text completion, translation, question-answering, and more.
+
+    * GPT-3.5: OpenAI has quietly rolled out a series of AI models based on GPT-3.5 in 2022, an improved version of GPT-3. The first of these models, ChatGPT, was unveiled at the end of November. ChatGPT is a fine-tuned version of GPT-3.5 that can engage in conversations about a variety of topics, such as prose writing, programming, script and dialogues, and explaining scientific concepts to varying degrees of complexity. 
+
+    * GPT-4: The GPT-4 model is released in 2023. GPT-4 is the largest and most powerful GPT model yet, and it is capable of generating text that is even more human-like than GPT-3. It is a large **multimodal model** (accepting image and text inputs, emitting text outputs) that exhibits human-level performance on various professional and academic benchmarks. For example, it passes a simulated bar exam with a score around the top 10% of test takers; in contrast, GPT-3.5's score was around the bottom 10%. 
+
+
+### GPT-J 
+
+GPT-J is an open source artificial intelligence language model developed by EleutherAI. It generally follows GPT-2 architecture with the only major difference of the so-called parallel decoders: instead of placing the feed-forward multilayer perceptron after the masked multi-head attention, they are computed in parallel in order to achieve higher throughput with distributed training.
+
+GPT-J performs very similarly to similarly-sized OpenAI's GPT-3 versions on various zero-shot down-streaming tasks and can even outperform it on code generation tasks. The newest version, GPT-J-6B is a language model based on a data set called The Pile. The Pile is an open-source 825 gigabyte language modelling data set that is split into 22 smaller datasets. GPT-J originally does not function as a chat bot unlike ChatGPT, only as a text predictor. In March 2023, Databricks released Dolly, an Apache-licensed, instruction-following model based on GPT-J with fine-tuning from the Stanford Alpaca dataset.
+
+GPT-J has been used for a variety of tasks, including:
+
+    Text generation
+    Code generation
+    Translation
+    Question answering
+    Summarization
+    Creative writing
+
+
+
+
+### LLaMA 
+ 
+Meta AI released LLaMA, a foundational, 65-billion-parameter large language model that is designed to help researchers advance their work in this subfield of AI. LLaMA is trained on a massive dataset of text from the 20 languages with the most speakers, focusing on those with Latin and Cyrillic alphabets. It can be used for a variety of tasks, including text generation, translation, and question answering. Meta AI is committed to open science, and LLaMA is available to the research community for free.
+
+Here are some of the key features of LLaMA:
+
+    * It is a transformer-based model with four size variations: 7B, 13B, 33B, and 65B parameters.
+    * It is trained on a massive dataset of text from the 20 languages with the most speakers.
+    * It can be used for a variety of tasks, including text generation, translation, and question answering.
+    * It is available to the research community for free.
+
+LLaMA is a powerful tool that has the potential to advance research in a variety of fields. Meta AI is excited to see how the research community uses LLaMA to make new discoveries.
+
+## Coming soon: Voice to text. speech recognition. Whisper  
+
+
+
+

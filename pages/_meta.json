@@ -1,0 +1,28 @@
+{
+  "index": {
+    "title":"Home",
+    "type": "page"
+  },
+  "guide": {
+    "title":"APU Guide",
+    "type":"page"
+  },
+  "Softwareguide": {
+    "title":"AI applications",
+    "type":"page"
+  },
+  "community": {
+    "title": "Community",
+    "type": "page"
+  },
+  "donate": {
+    "title": "Donation",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/TechPractice1",
+    "newWindow": true
+  }
+}
