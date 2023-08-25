@@ -11,14 +11,14 @@ const config: DocsThemeConfig = {
     key: 'docs-launch1',
     text: (
       <div className="flex justify-center items-center gap-2">
-        Welcome to our website! 👋 Please subscribe to<Link href="https://www.youtube.com/@tech-practice9805?sub_confirmation=1" target='blank'>youtube channel</Link> 
+        Welcome to our website! 👋  <Link href="https://www.youtube.com/@tech-practice9805?sub_confirmation=1" target='blank'> Please subscribe to the youtube channel</Link> 
       </div>
     ),
   },
   chat: {
     link: 'https://discord.com/invite/SgmBydQ2Mn',
   },
-  docsRepositoryBase: 'https://github.com/ttio2tech/agieverywhere',
+  docsRepositoryBase: 'https://github.com/ttio2tech/agieverywhere/tree/main/',
   footer: {
     text: `${new Date().getFullYear()} © AGIeverywhere.com`,
   },
