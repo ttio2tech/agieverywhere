@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.12",
+    "@vercel/analytics": "^1.0.2",
     "cobe": "^0.6.3",
     "next": "^13.4.1",
     "nextra": "latest",
