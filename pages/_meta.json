@@ -3,8 +3,12 @@
     "title":"Home",
     "type": "page"
   },
-  "guide": {
+  "apuguide": {
     "title":"APU Guide",
+    "type":"page"
+  },
+  "gpuguide": {
+    "title":"GPU Guide",
     "type":"page"
   },
   "Softwareguide": {
